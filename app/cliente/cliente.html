@@ -1,0 +1,42 @@
+<div class="mb-3"></div>
+<div class="container">
+  <div class="card border-success mb-3">
+    <div class="card-header text-primary">
+        <h2 class="card-title text-center">
+          {{titulo}}
+        </h2>
+    </div>
+    <div class="card-body text-primary">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+
+            </th>
+            <th>id</th>
+            <th>nombre</th>
+            <th> paterno</th>
+            <th>materno</th>
+            <th>email </th>
+            <th colspan="2" class="text-center"> Acciones </th>
+          </tr>
+        </thead>
+        <tbody>
+          @if (listadeClientes.length > 0){
+          @for (lista of listadeClientes; track lista.cliente) {
+          <tr>
+            <td> {{ lista.cliente}}</td>
+            <td> <button type="button" class="btn btn-outline-success btn-sm"> Editar</button></td>
+            <td> <button type="button" class="btn btn-outline-danger btn-sm "(click)="delete(lista)"> Eliminar</button></td>
+          </tr>
+        }
+      }@else{
+          <div class="alert alert-warning" role="alert">
+            A simple secondary alert! Check it out.
+          </div>
+      }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

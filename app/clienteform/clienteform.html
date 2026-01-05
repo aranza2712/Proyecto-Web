@@ -1,0 +1,83 @@
+<div class="mb-3"></div>
+<div class="container">
+  <div class="card">
+    <div class="card-header text-primary text-center">
+      <h1 class="card-title">
+          {{titulo}}
+      </h1>
+    </div>
+    <div class="card-body text-primary">
+      <form>
+        <div class="mb-3">
+          <label for="" class="form-label">
+            clave del Cliente
+          </label>
+          <input
+          type="number"
+          readonly
+          name="idCliente"
+          id="idCliente"
+          class="form-control"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">
+            Nombre del Cliente
+          </label>
+          <input
+          type="text"
+          readonly
+          name="nombre"
+          id="nombre"
+          class="form-control"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">
+            Apellido Paterno
+          </label>
+          <input
+          type="text"
+          readonly
+          name="paterno"
+          id="paterno"
+          class="form-control"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">
+            Materno
+          </label>
+          <input
+          type="text"
+          readonly
+          name="materno"
+          id="materno"
+          class="form-control"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">
+            Correo electronico
+          </label>
+          <input
+          type="email"
+          readonly
+          name="email"
+          id="email"
+          class="form-control"
+          >
+        </div>
+        @if (cliente.idCliente!=0){
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-success form-control">Actualizar </button>
+          </div>
+        } @else {
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary form-control"> Guardar </button>
+          </div>
+        }
+      </form>
+    </div>
+  </div>
+</div>
